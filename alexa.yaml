@@ -1,0 +1,34 @@
+alexa:
+  module: alexa
+  class: AlexaAPI
+
+  # Device translation for better device names. {{device}} in speech
+  # strings will be replaced
+  devices:
+    # device_id_see_log: kitchen
+    unknownDevice: unknown
+
+  # Which app should handle launch requests to the skill
+  # launchRequestApp: lrIntent
+
+  # Possible repsonse messages in case of errors
+  responseError:
+    - I'm sorry, something went wrong
+    - Sorry, an error occurred
+
+  # Possible response message when an intent ends (StopIntent, CancelIntent)
+  conversationEnd:
+    - <say-as>See you next time</say-as>
+    - <say-as>Hasta la vista, baby</say-as>
+    - <say-as interpret-as='interjection'>Ciao</say-as>
+    - <say-as interpret-as='interjection'>Bye bye</say-as>
+
+  # Messages for after an intent if the app replies 'next'
+  nextConversationQuestion:
+    - <p>What else can I do for you?</p>
+    - <p>Can I do something else for you?</p>
+
+  # Conversation question asked if user just replies with "yesIntent"
+  conversationQuestion:
+    - <p>What can I do for you?</p>
+    - <p>How can I help you?</p>

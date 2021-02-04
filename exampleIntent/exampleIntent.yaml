@@ -1,0 +1,4 @@
+exampleIntent:
+  module: exampleIntent
+  class: exampleIntent
+  example_device: media_player.example_device

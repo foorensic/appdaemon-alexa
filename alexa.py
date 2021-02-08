@@ -59,9 +59,11 @@ class AlexaAPI(hassapi.Hass):
         error = data.get('request', {}).get('error', {}).get('message', '')
 
         # Get a proper device name
-        device_id = data.get('System', {}).get('device',
-                                               {}).get('deviceId',
-                                                       '<no_device_id>')
+        device_id = data.get('context',
+                             {}).get('System',
+                                     {}).get('device',
+                                             {}).get('deviceId',
+                                                     '<no_device_id>')
         device = self.args.get('devices', {}).get(device_id, 'unknown device')
         # Log the device if not yet known
         if device_id not in self.args.get('devices', {}):

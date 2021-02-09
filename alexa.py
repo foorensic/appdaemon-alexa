@@ -271,7 +271,7 @@ class AlexaAPI(hassapi.Hass):
             return text
         for slotname, slotvalue in request['slots'].items():
             text = text.replace("{{" + slotname + "}}",
-                                slotvalue.get('value', ''))
+                                slotvalue.get('value', '') or '')
         return text.replace("{{device}}",
                             request['device']).replace("_", " ").replace(
                                 "...", "<break time='2s'/>")

@@ -6,8 +6,6 @@ This AppDaemon app allows you to wire up custom alexa skills with your AppDaemon
 
 When your custom alexa skill is invoked, Amazon sends an API request to the `alexa.py` app via the AppDaemon API. This script then inspects the request and tries to find the right intent-app to handle it. It passes on the request to the app which can then act on the data and provide an appropriate response back to Alexa. 
 
-Given that you have created a custom alexa `skill` and in this skill, you have created a `intents` that you would like to be handled by your AppDaemon. When configured 
-
 ### What can I do with it?
 
 You can do those things that are outside or beyond the default Alexa home automation commands or things like `haaska`. If you are familiar with [ReneTode's Alexa-AppDaemon-App](https://github.com/ReneTode/Alexa-AppDaemon-App), this thing pretty much does the same with a few differences or improvements. 

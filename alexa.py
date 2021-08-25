@@ -30,7 +30,7 @@ class AlexaAPI(hassapi.Hass):
         self.register_endpoint(self.api_call, 'alexa')
         self.sessions: Dict[str, Dict] = {}
 
-    def api_call(self, data):
+    def api_call(self, data, kwargs):
         """Entrypoint of REST call"""
         self.log('New Alexa API request')
         session_id = data.get('session', {}).get('sessionId', None)
